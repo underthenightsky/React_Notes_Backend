@@ -5,10 +5,7 @@ import  cors from 'cors';
 import  notesRoutes from './routes/notesRoutes.js';
 import  {connectDB} from "./lib/connectDb.js";
 const   app = express();
-       app.use(cors({
-       'Access-Control-Allow-Origin': '*'
-
-    }));
+       app.use(cors());
 
 app.use(express.json());
 app.options('*',cors());
