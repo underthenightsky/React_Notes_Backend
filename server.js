@@ -6,7 +6,8 @@ import  notesRoutes from './routes/notesRoutes.js';
 import  {connectDB} from "./lib/connectDb.js";
 const   app = express();
        app.use(cors({
-        origin: "https://react-notes-frontend-gamma.vercel.app" 
+       'Access-Control-Allow-Origin': '*'
+
     }));
 
 app.use(express.json());
