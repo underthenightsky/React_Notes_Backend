@@ -1,6 +1,6 @@
 let notes = []; // In-memory DB for simplicity
 let idCounter = 1;
-import { noteModel } from "../models/noteModel.ts";
+import  noteModel  from "../models/noteModel.js";
 
 export async function getNotes(req, res) {
   try {
