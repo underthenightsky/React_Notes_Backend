@@ -14,6 +14,7 @@ app.use(express.json());
 app.use('/notes', notesRoutes);
 // here we are choosing the port on which the backend is running , on which site it should listen to requests to 
 const PORT = 5000;
+app.get("/" ,)
 app.listen(5000, () =>
     {   connectDB()
         console.log(`Server running on port ${PORT}`)
