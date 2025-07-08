@@ -6,7 +6,7 @@ import  notesRoutes from './routes/notesRoutes.js';
 import  {connectDB} from "./lib/connectDb.js";
 const   app = express();
 app.use(cors({
-    origin : [process.env.FRONTEND_URL,"https://www.thunderclient.com"]
+    origin : [process.env.FRONTEND_URL,"http://localhost:5173"]
 }));
 app.use(express.json());
 
