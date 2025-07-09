@@ -8,14 +8,14 @@ const   app = express();
 
 
 app.use(express.json());
-app.use(cors({
-    origin:'https://react-notes-frontend-gamma.vercel.app/'
-}))
+app.use(cors(
+    // {origin:'https://react-notes-frontend-gamma.vercel.app/'}
+    ))
 app.use('/notes', notesRoutes);
 // here we are choosing the port on which the backend is running , on which site it should listen to requests to 
 const PORT = 5000;
-app.get("/" ,()=>{
-    return resizeBy.json({"message":"Welcome"})
+app.get("/" ,(req,res)=>{
+    return res.json({"message":"Welcome"})
 })
 export async function OPTIONS() {
   return new Response(null, {
