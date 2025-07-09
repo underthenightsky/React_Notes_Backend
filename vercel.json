@@ -3,7 +3,7 @@
     "builds":[{"src":"server.js","use":"@vercel/node"}],
     "routes":[
         {"src":"/notes/(.*)","dest":"routes/notesRoutes.js?id=$1"}
-        //, { "src": "/(.*)", "dest": "server.js" }
+       
     ]
   
 }
