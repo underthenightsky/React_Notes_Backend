@@ -28,11 +28,11 @@ export async function OPTIONS() {
     },
   });
 }
-export async function GET() {
-  return Response.json({ ok: true }, {
-    headers: { 'Access-Control-Allow-Origin': '*' },
-  });
-}
+// export async function GET() {
+//   return Response.json({ ok: true }, {
+//     headers: { 'Access-Control-Allow-Origin': '*' },
+//   });
+// }
 app.listen(5000, () =>
     {   connectDB()
         console.log(`Server running on port ${PORT}`)
