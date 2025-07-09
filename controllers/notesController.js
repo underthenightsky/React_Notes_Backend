@@ -20,10 +20,14 @@ export async function getNotes(req, res) {
       }
     }
 
-    res.status(201).json(filteredNotes);
+    res.status(201).json(filteredNotes, {
+    headers: { 'Access-Control-Allow-Origin': '*' },
+  });
   } catch (error) {
     console.log(error);
-    res.status(500).json(error);
+    res.status(500).json(error, {
+    headers: { 'Access-Control-Allow-Origin': '*' },
+  });
   }
 }
 
@@ -41,10 +45,14 @@ export async function createNote(req, res) {
       tags: tags || [],
     });
     await newNote.save();
-    res.status(201).json(newNote);
+    res.status(201).json(newNote, {
+    headers: { 'Access-Control-Allow-Origin': '*' },
+  });
   } catch (error) {
     console.log(error);
-    return res.status(500);
+    return res.status(500, {
+    headers: { 'Access-Control-Allow-Origin': '*' },
+  });
   }
 }
 
@@ -52,7 +60,9 @@ export async function deleteNote(req, res) {
   const { id } = req.params;
   notes = notes.filter((note) => note.id !== parseInt(id));
   await noteModel.findByIdAndDelete(id);
-  res.status(204).json({ message: "success" });
+  res.status(204).json({ message: "success" }, {
+    headers: { 'Access-Control-Allow-Origin': '*' },
+  });
 }
 
 // export async function getNoteData(req,res){
