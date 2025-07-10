@@ -10,6 +10,7 @@ const   app = express();
 
 app.use(cors(
     {origin:['https://react-notes-frontend-gamma.vercel.app',"http://localhost:5173"],
+        methods: ["POST", "GET","DELETE"],
         credentials:true
     }
     ))

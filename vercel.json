@@ -6,5 +6,7 @@
        { "src": "/(.*)", "dest": "/server.js" },
        {"src":"/favicon.ico","dest":"/lib/favicon.ico"}
     ]
-  
+  ,"env":{
+    "MONGODB_URI":"@MONGODB_URI"
+  }
 }
