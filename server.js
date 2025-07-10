@@ -35,8 +35,8 @@ app.get("/" ,(req,res)=>{
 //     headers: { 'Access-Control-Allow-Origin': '*' },
 //   });
 // }
-app.listen(5000, () =>
-    {   connectDB()
+app.listen(5000, async() =>
+    {  await connectDB()
         console.log(`Server running on port ${PORT}`)
         
     });
