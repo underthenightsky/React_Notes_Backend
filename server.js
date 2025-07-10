@@ -7,12 +7,13 @@ import  {connectDB} from "./lib/connectDb.js";
 const   app = express();
 
 
-app.use(express.json());
+
 app.use(cors(
     {origin:['https://react-notes-frontend-gamma.vercel.app',"http://localhost:5173"],
         credentials:true
     }
     ))
+    app.use(express.json());
 app.use('/notes', notesRoutes);
 // here we are choosing the port on which the backend is running , on which site it should listen to requests to 
 const PORT = 5000;
